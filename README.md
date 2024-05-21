@@ -3,7 +3,7 @@
 ## Project Overview
 
 This project aims to unpack the impact of smoking on insurance charges and the rate of smoking between men and women.
-Since we are testing the means of two samples (smoking and non-smokers) for inferential statistics, we employed a t.test method.
+Since we are testing the means of two samples (smokers and non-smokers) for inferential statistics, we employed a t.test method.
 
 ## Data Sources
 
