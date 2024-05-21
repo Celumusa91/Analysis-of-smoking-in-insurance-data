@@ -1,4 +1,4 @@
-# Analysis-of-Insurers-Smoking-
+# Analysis of Smoking Insurers
 
 ## Project Overview
 
@@ -40,7 +40,11 @@ The data cleaning and preparation phase included the following steps;
 ## Results and Findings
 
 - The smoking Rate was 20.49%
+
 - For the Claim: **Insurers who smoke are charged more than insurers who does not smoke**. The mean charge for smoking insurers was 32050.23 while that of non_smokers was 8434.268.
 The t.test also revield the same mean charge values for the two groups. The test revieled that there is a 95% chance that the difference in charge between the smokers and non-smokers is from 22197.21 to 25034.71. So, on average, an insurer who smoke is charged higher than an insurer who does not smoke. The p-value of 2.2e-16 suggest that we reject the null hypothesis and accept the alternative hypothesis that insurers who smoke are charged higher than insurers who do not smoke.
+
+- For the claim: **There is no relationship between sex and smoking**. Male insurers have 23.5% smoking rate while woman insurers have 17.4% smoking rate. The t.test revieled the same mean smoking rate between the insurer sexes. The test also unpacked that we are 95% confident that male insurers have from 1.8 to 10% higher smoking rate than female insurers. With p-value = 0.005248, we accept the null hypothesis and conclude that indeed male insures have higher smoking rate than female insurers.
+
 
 
