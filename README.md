@@ -46,5 +46,7 @@ The t.test also revield the same mean charge values for the two groups. The test
 
 - For the claim: **There is no relationship between sex and smoking**. Male insurers have 23.5% smoking rate while woman insurers have 17.4% smoking rate. The t.test revieled the same mean smoking rate between the insurer sexes. The test also unpacked that we are 95% confident that male insurers have from 1.8 to 10% higher smoking rate than female insurers. With p-value = 0.005248, we accept the null hypothesis and conclude that indeed male insures have higher smoking rate than female insurers.
 
+See analysis report (https://raw.githack.com/Celumusa91/Analysis-of-smoking-in-insurance-data/main/Hypothesis-Testing-script.html)
 
+See analysis code ()
 
