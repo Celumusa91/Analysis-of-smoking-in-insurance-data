@@ -48,5 +48,5 @@ The t.test also revield the same mean charge values for the two groups. The test
 
 See analysis report (https://raw.githack.com/Celumusa91/Analysis-of-smoking-in-insurance-data/main/Hypothesis-Testing-script.html)
 
-See analysis code ()
+See analysis code (https://raw.githubusercontent.com/Celumusa91/Analysis-of-smoking-in-insurance-data/main/Hypothesis%20Testing%20script.Rmd)
 
