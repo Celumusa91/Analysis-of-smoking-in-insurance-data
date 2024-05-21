@@ -7,7 +7,7 @@ Since we are testing the means of two samples (smokers and non-smokers) for infe
 
 ## Data Sources
 
-A csv insurance data from kaggle website was used. The dataset contained variables are ;
+A csv insurance data from kaggle website was used. The dataset contained the following variables;
 - age - Age of the insurer
 - sex - Sex of the insurer
 - bmi - The body mass index
