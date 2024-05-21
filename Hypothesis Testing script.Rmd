@@ -1,0 +1,114 @@
+---
+title: "Hypothesis Testing Analysis"
+author: "Celumusa Fakudze"
+date: "2024-05-18"
+output: html_document
+---
+
+## Importing dataset into R-studio environment
+
+
+```{r}
+library(readr)
+insurance <- read_csv("C:/Users/Fakudze/Desktop/EswatiniUser/datasets/insurance.csv")
+View(insurance)
+```
+
+
+## Loading packages 
+
+
+```{r}
+library(tidyverse)
+library(dplyr)
+library(summarytools)
+library(Hmisc)
+library(mice)
+```
+
+
+## Checking for any missing values in the dataset
+
+
+```{r}
+sum(is.na(insurance))
+```
+
+
+## Studying data types
+
+
+```{r}
+str(insurance)
+```
+
+
+## Clean smoker variable
+
+The smoker variable responses are recoded as numerics to ease analysis and then converted to a factor.
+
+
+```{r}
+insurance$smoker[insurance$smoker == "no"] <- "1"
+insurance$smoker[insurance$smoker == "yes"] <- "2"
+insurance$smoker <- as.factor(insurance$smoker)
+```
+
+
+## Create a smoker dummy variable
+
+
+```{r}
+insurance$smoker_dummy <- as.integer(insurance$smoker == "2")
+```
+
+
+## Calculate the smoking rate
+
+
+```{r}
+sum(insurance$smoker_dummy)/nrow(insurance)*100
+```
+
+
+## Hypothesis testing for media claims
+
+
+### **Claim 1**: Insurers who smoke are charged more than insurers who does not smoke.
+
+
+```{r}
+smokers <- subset(insurance, smoker_dummy == 1)
+non_smokers <- subset(insurance, smoker_dummy == 0)
+mean(smokers$charges, na.rm = TRUE)
+mean(non_smokers$charges, na.rm = TRUE)
+```
+
+
+### Is this statistically significant? A t-test is employed
+
+
+```{r}
+t.test(smokers$charges, non_smokers$charges, alternative = "two.sided", conf.level = 0.95)
+```
+
+
+### **Claim 2**: Sex has no effect to smoking
+
+
+```{r}
+men = subset(insurance, sex == "male")
+women = subset(insurance, sex == "female")
+mean(men$smoker_dummy, na.rm = TRUE)
+mean(women$smoker_dummy, na.rm = TRUE)
+
+```
+
+
+### Is this staistically significant? Lets put it into a t.test
+
+
+```{r}
+t.test(men$smoker_dummy, women$smoker_dummy, alternative = "two.sided", conf.level = 0.95)
+```
+
